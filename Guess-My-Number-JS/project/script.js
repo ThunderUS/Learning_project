@@ -35,8 +35,8 @@ function loose() {
 
 function gameLogic() {
     const guess = Number(guessInput.value);
-    if (!guess) {
-        printMassege('No number!!!');
+    if (!guess || guess < 1 || guess > 20) {
+        printMassege('Enter number  between 1-20');
         return;
     }
     if (guess === number) {
